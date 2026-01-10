@@ -13,25 +13,34 @@
             <h1>PayLink Africa</h1>
 
             <nav>
-                <ul class="menu">
+                <ul class="menu" id="menu">
+                    <li class="close-menu" id="close-menu">
+                        <a href="#" class="nav-link ri-close-large-line" aria-label="close menu"></a>
+                    </li>
                     <li><a href="#" class="nav-link">Accueil</a></li>
                     <li><a href="#" class="nav-link">Fonctionnalités</a></li>
                     <li><a href="#" class="nav-link">Tarifs</a></li>
                     <li><a href="#" class="nav-link">Sécurité</a></li>
                     <li><a href="#" class="nav-link">Entreprises</a></li>
                     <li><a href="#" class="nav-link">Développeurs (API)</a></li>
+                    <li class="nav-mobile-btn"><a href="#" class="btn btn-primary">Connexion</a></li>
                 </ul>
+                <button class="nav-link open-menu" id="open-menu">
+                    <i class="ri-menu-line"></i>
+                </button>
             </nav>
 
-            <a href="#" class="btn btn-primary">Connexion</a>
+            <div class="nav-btn">
+                <a href="#" class="btn btn-primary">Connexion</a>
+            </div>
         </div>
     </header>
     
     <section class="hero-section">
         <div class="wrapper flow-md">
-            <div class="hero-content flow">
-                <h2 class="text-md text-center">Transférez, payez et recevez de l’argent partout en Afrique</h2>
-                <p class="text-sm text-center">
+            <div class="hero-content">
+                <h2 class="text-lg text-bold text-center">Transférez, payez et recevez de l’argent partout en Afrique</h2>
+                <p class="text text-center">
                     Avec PayLink Africa, profitez d’un service rapide, sécurisé et compatible avec les opérateurs Mobile Money les plus utilisés (Orange Money, M-Pesa, MTN, Airtel…)
                 </p>
                 <div>
@@ -40,7 +49,10 @@
                 </div>
             </div>
             <div class="hero-img-wrapper">
-                <img src="https://placehold.co/600x400" width="600" height="400" alt="Image">
+                <video controls width="1600" height="900" poster="assets/img/hero.png">
+                <source src="" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+                </video>
             </div>
         </div>
     </section>
@@ -54,29 +66,29 @@
     
                 <ul class="why-list flow-sm">
                     <li>
-                        <h3 class="text-sm">Ultra-rapide</h3>
+                        <h3 class="text-sm text-bold">Ultra-rapide</h3>
                         <p class="text-xm">Envoi d’argent et paiement instantanés, même en zone rurale</p>
                     </li>
                     <li>
-                        <h3 class="text-sm">Compatible opérateurs Mobile Money</h3>
+                        <h3 class="text-sm text-bold">Compatible opérateurs Mobile Money</h3>
                         <p class="text-xm">Fonctionne partout : Orange Money, M-Pesa, MTN, Airtel</p>
                     </li>
                     <li>
-                        <h3 class="text-sm">Sécurisé</h3>
+                        <h3 class="text-sm text-bold">Sécurisé</h3>
                         <p class="text-xm">Chiffrement avancé, authentification forte, analyse anti-fraude</p>
                     </li>
                     <li>
-                        <h3 class="text-sm">Accessible</h3>
+                        <h3 class="text-sm text-bold">Accessible</h3>
                         <p class="text-xm">Interface simple, disponible sur mobile, même avec une connexion faible</p>
                     </li>
                     <li>
-                        <h3 class="text-sm">Fiable & transparent</h3>
+                        <h3 class="text-sm text-bold">Fiable & transparent</h3>
                         <p class="text-xm">Historique clair + absence de frais cachés</p>
                     </li>
                 </ul>
             </div>
             <div class="why-img-wrapper">
-                <img src="https://placehold.co/500x500" width="500" height="500" alt="Image">
+                <img src="assets/img/why.png" width="1600" height="900" alt="Image">
             </div>
         </div>
     </section>
@@ -85,37 +97,37 @@
         <div class="wrapper">
             <ul class="feature-list">
                 <li class="feature">
-                    <h3 class="text-sm">Transferts d’argent instantanés</h3>
+                    <h3 class="text-sm text-bold">Transferts d’argent instantanés</h3>
                     <p class="text-xm">
                         Envoyez de l’argent à vos proches ou collaborateurs en quelques secondes, d’un pays à l’autre
                     </p>
                 </li>
                 <li class="feature">
-                    <h3 class="text-sm">Paiement de factures</h3>
+                    <h3 class="text-sm text-bold">Paiement de factures</h3>
                     <p class="text-xm">
                         Électricité, eau, internet, universités, assurances… Tout depuis un seul endroit
                     </p>
                 </li>
                 <li class="feature">
-                    <h3 class="text-sm">Caisse en ligne pour les commerçants</h3>
+                    <h3 class="text-sm text-bold">Caisse en ligne pour les commerçants</h3>
                     <p class="text-xm">
                         Gérez vos paiements clients, générez des factures et recevez via Mobile Money
                     </p>
                 </li>
                 <li class="feature">
-                    <h3 class="text-sm">Comptes multi-devises</h3>
+                    <h3 class="text-sm text-bold">Comptes multi-devises</h3>
                     <p class="text-xm">
                         Gérez le FCFA, le Naira, le Shilling, le Franc Rwandais ou l’Euro depuis un compte unique
                     </p>
                 </li>
                 <li class="feature">
-                    <h3 class="text-sm">Carte virtuelle PayLink</h3>
+                    <h3 class="text-sm text-bold">Carte virtuelle PayLink</h3>
                     <p class="text-xm">
                         Effectuez des paiements en ligne (Netflix, Amazon, cours en ligne, etc.)
                     </p>
                 </li>
                 <li class="feature">
-                    <h3 class="text-sm">API pour développeurs</h3>
+                    <h3 class="text-sm text-bold">API pour développeurs</h3>
                     <p class="text-xm">
                         Intégration des paiements dans des sites ou applications web
                     </p>
@@ -127,24 +139,24 @@
     <section class="targets-section">
         <div class="wrapper">
             <ul class="target-list">
-                <li class="target flow-xs">
-                    <h3 class="text-sm text-center">Commerçants</h3>
+                <li class="target">
+                    <h3 class="text-sm text-bold text-center">Commerçants</h3>
                     <p class="text-xm text-center">Encaissez rapidement les paiements Mobile Money, même sans terminal</p>
                 </li>
-                <li class="target flow-xs">
-                    <h3 class="text-sm text-center">Étudiants</h3>
+                <li class="target">
+                    <h3 class="text-sm text-bold text-center">Étudiants</h3>
                     <p class="text-xm text-center">Payez facilement vos frais universitaires ou vos formations en ligne</p>
                 </li>
-                <li class="target flow-xs">
-                    <h3 class="text-sm text-center">Freelancers</h3>
+                <li class="target">
+                    <h3 class="text-sm text-bold text-center">Freelancers</h3>
                     <p class="text-xm text-center">Recevez des paiements depuis l’étranger sans friction</p>
                 </li>
-                <li class="target flow-xs">
-                    <h3 class="text-sm text-center">Entreprises</h3>
+                <li class="target">
+                    <h3 class="text-sm text-bold text-center">Entreprises</h3>
                     <p class="text-xm text-center">Automatisez le paiement des salaires et des prestataires</p>
                 </li>
-                <li class="target flow-xs">
-                    <h3 class="text-sm text-center">Diaspora</h3>
+                <li class="target">
+                    <h3 class="text-sm text-bold text-center">Diaspora</h3>
                     <p class="text-xm text-center">Envoyez de l’argent à la famille avec un minimum de frais</p>
                 </li>
             </ul>
@@ -154,7 +166,7 @@
     <section class="security-section">
         <div class="wrapper">
             <div class="security-content flow">
-                <h2 class="text-md">Votre argent est protégé par les meilleures technologies</h2>
+                <h2 class="text-md text-bold">Votre argent est protégé par les meilleures technologies</h2>
                 <ul class="flow">
                     <li class="text-xm">Chiffrement bancaire 256 bits</li>
                     <li class="text-xm">2FA / OTP</li>
@@ -164,7 +176,7 @@
                 </ul>
             </div>
             <div class="security-img-wrapper">
-                <img src="https://placehold.co/600x400" width="600" height="400" alt="Image">
+                <img src="assets/img/security.png" width="1600" height="900" alt="Image">
             </div>
         </div>
     </section>
@@ -172,7 +184,7 @@
     <section class="pricing-section">
         <div class="wrapper">
             <div class="pricing-img-wrapper">
-                <img src="https://placehold.co/600x400" width="600" height="400" alt="Image">
+                <img src="assets/img/pricing.png" width="1600" height="900" alt="Image">
             </div>
 
             <div class="pricing-content">
@@ -206,22 +218,22 @@
         <div class="wrapper">
             <ul class="partner-list">
                 <li class="partner">
-                    <img src="https://placehold.co/600x400" width="600" height="400" alt="Orange Money">
+                    <img src="assets/img/logo.svg" width="300" height="300" alt="Orange Money">
                 </li>
                 <li class="partner">
-                    <img src="https://placehold.co/600x400" width="600" height="400" alt="Moov Money">
+                    <img src="assets/img/logo2.svg" width="300" height="300" alt="Moov Money">
                 </li>
                 <li class="partner">
-                    <img src="https://placehold.co/600x400" width="600" height="400" alt="MTN Mobile Money">
+                    <img src="assets/img/logo3.svg" width="300" height="300" alt="MTN Mobile Money">
                 </li>
                 <li class="partner">
-                    <img src="https://placehold.co/600x400" width="600" height="400" alt="Ecobank">
+                    <img src="assets/img/logo4.svg" width="300" height="300" alt="Ecobank">
                 </li>
                 <li class="partner">
-                    <img src="https://placehold.co/600x400" width="600" height="400" alt="UBA">
+                    <img src="assets/img/logo5.svg" width="300" height="300" alt="UBA">
                 </li>
                 <li class="partner">
-                    <img src="https://placehold.co/600x400" width="600" height="400" alt="Airtel">
+                    <img src="assets/img/logo6.svg" width="300" height="300" alt="Airtel">
                 </li>
             </ul>
         </div>
@@ -229,7 +241,7 @@
 
     <section class="cta-section">
         <div class="wrapper">
-            <h2 class="text-md text-center">Payez, recevez, avancez</h2>
+            <h2 class="text-md text-bold text-center">Payez, recevez, avancez</h2>
             <p class="text-center">
                 Rejoignez les millions d’utilisateurs qui choisissent la simplicité et la sécurité pour leurs paiements
             </p>
@@ -305,5 +317,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
