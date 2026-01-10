@@ -35,9 +35,9 @@
     --gap-10: clamp(13.5rem, 11.3523rem + 9.5455vw, 18.75rem);
 
     /****************** Colors ************/
-    --bg-dark: hsl(30 15% 5%);
-    --bg: hsl(30 15% 10%);
-    --bg-light: hsl(30 15% 15%);
+    --bg-dark: hsl(30 15% 10%);
+    --bg: hsl(30 15% 15%);
+    --bg-light: hsl(30 15% 20%);
 
     --text: hsl(30 15% 95%);
     --text-muted : hsl(30 15% 70%);
@@ -63,24 +63,6 @@
     0 8px 16px hsl(0 0% 0% / 0.16),
     0 0 24px hsl(0 0% 0% / 0.10);
 }
-
-
-@media (prefers-color-scheme: light) {
-    :root {
-    --bg-light: hsl(30 25% 75%);
-    --bg: hsl(30 63% 95%);
-    --bg-dark: hsl(30 15% 100%);
-
-    --text: hsl(30 15% 5%);
-    --text-muted : hsl(30 15% 30%);
-
-    --clr-accent: hsl(210 71% 45%);
-    --clr-primary: hsl(30 71% 45%);
-
-    --clr-border: hsl(30 15% 80%);
-    }
-}
-
 
 @layer reset, base, layout, utilities;
 
@@ -140,6 +122,7 @@
         height: auto;
         display: block;
         max-width: 100%;
+        border-radius: .5rem;
     }
 }
 
@@ -148,6 +131,68 @@
         color: var(--text);
         background-color: var(--bg-dark);
     }
+
+    /****************************************** HEADER **************************/
+    header {
+        background-color: var(--bg);
+    }
+
+    .nav-link {
+        color: var(--clr-white);
+    }
+
+    .nav-link:hover {
+        color: var(--clr-primary);
+    }
+
+    @media (width < 750px) {
+        .menu {
+            background-color: var(--bg-light);
+        }
+    }
+    /****************************************** HEADER **************************/
+
+    /****************************************** HERO SECTION **************************/
+    /****************************************** HERO SECTION **************************/
+
+    /****************************************** WHY SECTION **************************/
+    /****************************************** WHY SECTION **************************/
+
+    /****************************************** FEATURES SECTION **************************/
+    .feature {
+        background-color: var(--bg);
+    }
+    /****************************************** FEATURES SECTION **************************/
+
+    /****************************************** TARGETS SECTION **************************/
+    .target {
+        background-color: var(--bg);
+    }
+    /****************************************** TARGETS SECTION **************************/
+
+    /****************************************** SECURITY SECTION **************************/
+    /****************************************** SECURITY SECTION **************************/
+
+    /****************************************** PRICING SECTION **************************/
+    /****************************************** PRICING SECTION **************************/
+
+    /****************************************** PARTNERS SECTION **************************/
+    .partners-section {
+        background-color: var(--bg-light);
+    }
+    /****************************************** PARTNERS SECTION **************************/
+
+    /****************************************** CTA SECTION **************************/
+    .cta-section .wrapper {
+        background-color: var(--bg);
+    }
+    /****************************************** CTA SECTION **************************/
+
+    /****************************************** FOOTER **************************/
+    footer {
+        background-color: var(--bg);
+    }
+    /****************************************** FOOTER **************************/
 }
 
 @layer layout {
@@ -164,20 +209,58 @@
         gap: var(--gap-0);
         align-items: center;
     }
+
+    @media (width > 750px) {
+        .open-menu, .close-menu, .nav-mobile-btn {
+            display: none;
+        }
+    }
+
+    @media (width < 750px) {
+        .nav-btn {
+            display: none;
+        }
+
+        .menu {
+            z-index: 10;
+            inset: 0 0 auto 0;
+            position: absolute;
+            translate: 0 -100%;
+
+            padding-block: var(--padding-7);
+
+            display: flex;
+            gap: var(--gap-4);
+            flex-direction: column;
+        }
+
+        .menu.show {
+            translate: 0 0;
+        }
+    }
     /****************************************** HEADER **************************/
 
     /****************************************** SECTIONS **************************/
     section + section {
-        margin-top: var(--gap-9);
+        margin-top: var(--gap-8);
+    }
+
+    .wrapper {
+        padding-block: var(--gap-5);
     }
     /****************************************** SECTIONS **************************/
 
     /****************************************** HERO SECTION **************************/
     .hero-section {
-        margin-top: var(--gap-6);
+        margin-top: var(--gap-4);
     }
 
     .hero-content {
+        display: flex;
+        gap: var(--gap-1);
+        align-items: center;
+        flex-direction: column;
+
         div {
             display: flex;
             gap: var(--gap-1);
@@ -185,7 +268,7 @@
         }
     }
 
-    .hero-section img {
+    .hero-section video {
         width: 100%;
     }
     /****************************************** HERO SECTION **************************/
@@ -205,6 +288,13 @@
         gap: var(--gap-2);
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     }
+
+    .feature {
+        display: flex;
+        gap: var(--gap-0);
+        flex-direction: column;
+        padding: var(--padding-3);
+    }
     /****************************************** FEATURES SECTION **************************/
 
     /****************************************** TARGETS SECTION **************************/
@@ -212,6 +302,13 @@
         display: grid;
         gap: var(--gap-2);
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    }
+
+    .target {
+        display: flex;
+        gap: var(--gap-0);
+        flex-direction: column;
+        padding: var(--padding-3);
     }
     /****************************************** TARGETS SECTION **************************/
 
@@ -236,7 +333,7 @@
     /****************************************** PARTNERS SECTION **************************/
     .partner-list {
         display: flex;
-        gap: var(--gap-2);
+        gap: var(--gap-4);
         align-items: center;
         justify-content: space-between;
     }
@@ -399,27 +496,28 @@
         padding: var(--padding-2) var(--padding-3);
     }
 
-    .btn-primary {
-        color: var(--clr-white);
-        background-color: var(--clr-primary);
+    :where(.btn-primary, .btn-secondary) {
+        text-align: center;
+        color: var(--_btn-clr);
+        background-color: var(--_btn-bg);
         transition: background-color 0.2s, color 0.2s;
 
         * {
-            color: var(--clr-white);
-        }
-    }    
-
-    .btn-secondary {
-        color: var(--clr-black);
-        outline: 1px solid var(--clr-black);
-        transition: background-color 0.2s, color 0.2s;
-
-        * {
-            color: var(--clr-black);
+            color: var(--_btn-clr);
         }
     }
 
-    .btn-primary:hover, .btn-secondary:hover {
+    .btn-primary {
+        --_btn-clr: var(--clr-white);
+        --_btn-bg: var(--clr-primary);
+    }    
+
+    .btn-secondary {
+        --_btn-clr: var(--clr-white);
+        outline: 1px solid var(--clr-white);
+    }
+    
+    :where(.btn-primary, .btn-secondary):hover {
         outline: none;
         color: var(--clr-white);
         background-color: var(--clr-accent);
@@ -429,26 +527,22 @@
         }
     }
 
-    .link-alt {
+    :is(.link, .link-alt){
         border: none;
         outline: none;
         text-decoration: none;
-        color: var(--clr-black);
-    }
-
-    .link-alt {
-        color: var(--clr-primary);
-        text-decoration: underline;
-        text-underline-offset: 4px;
         transition: color 0.2s;
     }
 
-    .link:hover, .link-alt:hover {
-        text-decoration: none;
-        color: var(--clr-accent);
+    .link {
+        color: var(--clr-dark-light);
     }
 
-    .accent {
+    .link-alt {
+        color: var(--clr-white);
+    }
+
+    .link:hover, .link-alt:hover {
         color: var(--clr-primary);
     }
     /*********************** BUTTONS**************************/
