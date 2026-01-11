@@ -10,17 +10,17 @@
 <body>
     <header>
         <div class="wrapper">
-            <h1>PayLink Africa</h1>
+            <h1 class="text text-bold">PayLink Africa</h1>
 
             <nav>
                 <ul class="menu" id="menu">
                     <li class="close-menu" id="close-menu">
                         <a href="#" class="nav-link ri-close-large-line" aria-label="close menu"></a>
                     </li>
-                    <li><a href="#" class="nav-link">Accueil</a></li>
-                    <li><a href="#" class="nav-link">Fonctionnalités</a></li>
-                    <li><a href="#" class="nav-link">Tarifs</a></li>
-                    <li><a href="#" class="nav-link">Sécurité</a></li>
+                    <li><a href="#hero-section" class="nav-link">Accueil</a></li>
+                    <li><a href="#features-section" class="nav-link">Fonctionnalités</a></li>
+                    <li><a href="#pricing-section" class="nav-link">Tarifs</a></li>
+                    <li><a href="#security-section" class="nav-link">Sécurité</a></li>
                     <li><a href="#" class="nav-link">Entreprises</a></li>
                     <li><a href="#" class="nav-link">Développeurs (API)</a></li>
                     <li class="nav-mobile-btn"><a href="#" class="btn btn-primary">Connexion</a></li>
@@ -36,10 +36,10 @@
         </div>
     </header>
     
-    <section class="hero-section">
+    <section class="hero-section" id="hero-section">
         <div class="wrapper flow-md">
             <div class="hero-content">
-                <h2 class="text-lg text-bold text-center">Transférez, payez et recevez de l’argent partout en Afrique</h2>
+                <h2 class="text-xl text-bold text-center">Transférez, payez et recevez de l’argent partout en Afrique</h2>
                 <p class="text text-center">
                     Avec PayLink Africa, profitez d’un service rapide, sécurisé et compatible avec les opérateurs Mobile Money les plus utilisés (Orange Money, M-Pesa, MTN, Airtel…)
                 </p>
@@ -48,8 +48,8 @@
                     <a href="#" class="btn btn-secondary">Découvrir les fonctionnalités</a>
                 </div>
             </div>
-            <div class="hero-img-wrapper">
-                <video controls width="1600" height="900" poster="assets/img/hero.png">
+            <div class="img-wrapper">
+                <video controls width="1600" height="900" poster="assets/img/hero.avif" fetchpriority=high>
                 <source src="" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo.
                 </video>
@@ -65,68 +65,89 @@
                 </p>
     
                 <ul class="why-list flow-sm">
-                    <li>
-                        <h3 class="text-sm text-bold">Ultra-rapide</h3>
-                        <p class="text-xm">Envoi d’argent et paiement instantanés, même en zone rurale</p>
+                    <li class="why">
+                        <i class="ri-sparkling-line text-md"></i>
+                        <div>
+                            <h3 class="text-sm text-bold">Ultra-rapide</h3>
+                            <p class="text-xm">Envoi d’argent et paiement instantanés, même en zone rurale</p>
+                        </div>
                     </li>
-                    <li>
-                        <h3 class="text-sm text-bold">Compatible opérateurs Mobile Money</h3>
-                        <p class="text-xm">Fonctionne partout : Orange Money, M-Pesa, MTN, Airtel</p>
+                    <li class="why">
+                        <i class="ri-sparkling-line text-md"></i>
+                        <div>
+                            <h3 class="text-sm text-bold">Compatible opérateurs Mobile Money</h3>
+                            <p class="text-xm">Fonctionne partout : Orange Money, M-Pesa, MTN, Airtel</p>
+                        </div>
                     </li>
-                    <li>
-                        <h3 class="text-sm text-bold">Sécurisé</h3>
-                        <p class="text-xm">Chiffrement avancé, authentification forte, analyse anti-fraude</p>
+                    <li class="why">
+                        <i class="ri-sparkling-line text-md"></i>
+                        <div>
+                            <h3 class="text-sm text-bold">Sécurisé</h3>
+                            <p class="text-xm">Chiffrement avancé, authentification forte, analyse anti-fraude</p>
+                        </div>
                     </li>
-                    <li>
-                        <h3 class="text-sm text-bold">Accessible</h3>
-                        <p class="text-xm">Interface simple, disponible sur mobile, même avec une connexion faible</p>
+                    <li class="why">
+                        <i class="ri-sparkling-line text-md"></i>
+                        <div>
+                            <h3 class="text-sm text-bold">Accessible</h3>
+                            <p class="text-xm">Interface simple, disponible sur mobile, même avec une connexion faible</p>
+                        </div>
                     </li>
-                    <li>
-                        <h3 class="text-sm text-bold">Fiable & transparent</h3>
-                        <p class="text-xm">Historique clair + absence de frais cachés</p>
+                    <li class="why">
+                        <i class="ri-sparkling-line text-md"></i>
+                        <div>
+                            <h3 class="text-sm text-bold">Fiable & transparent</h3>
+                            <p class="text-xm">Historique clair + absence de frais cachés</p>
+                        </div>
                     </li>
                 </ul>
             </div>
-            <div class="why-img-wrapper">
-                <img src="assets/img/why.png" width="1600" height="900" alt="Image">
+            <div class="img-wrapper">
+                <img src="assets/img/why.avif" width="1600" height="900" loading="lazy" alt="Image">
             </div>
         </div>
     </section>
 
-    <section class="features-section">
+    <section class="features-section" id="features-section">
         <div class="wrapper">
             <ul class="feature-list">
                 <li class="feature">
+                    <i class="ri-money-cny-circle-line text-lg"></i>
                     <h3 class="text-sm text-bold">Transferts d’argent instantanés</h3>
                     <p class="text-xm">
                         Envoyez de l’argent à vos proches ou collaborateurs en quelques secondes, d’un pays à l’autre
                     </p>
                 </li>
                 <li class="feature">
+                    <i class="ri-file-text-line text-lg"></i>
                     <h3 class="text-sm text-bold">Paiement de factures</h3>
                     <p class="text-xm">
                         Électricité, eau, internet, universités, assurances… Tout depuis un seul endroit
                     </p>
                 </li>
                 <li class="feature">
+                    <i class="ri-store-line text-lg"></i>
                     <h3 class="text-sm text-bold">Caisse en ligne pour les commerçants</h3>
                     <p class="text-xm">
                         Gérez vos paiements clients, générez des factures et recevez via Mobile Money
                     </p>
                 </li>
                 <li class="feature">
+                    <i class="ri-exchange-dollar-line text-lg"></i>
                     <h3 class="text-sm text-bold">Comptes multi-devises</h3>
                     <p class="text-xm">
                         Gérez le FCFA, le Naira, le Shilling, le Franc Rwandais ou l’Euro depuis un compte unique
                     </p>
                 </li>
                 <li class="feature">
+                    <i class="ri-bank-card-line text-lg"></i>
                     <h3 class="text-sm text-bold">Carte virtuelle PayLink</h3>
                     <p class="text-xm">
                         Effectuez des paiements en ligne (Netflix, Amazon, cours en ligne, etc.)
                     </p>
                 </li>
                 <li class="feature">
+                    <i class="ri-code-line text-lg"></i>
                     <h3 class="text-sm text-bold">API pour développeurs</h3>
                     <p class="text-xm">
                         Intégration des paiements dans des sites ou applications web
@@ -163,28 +184,43 @@
         </div>
     </section>
 
-    <section class="security-section">
+    <section class="security-section" id="security-section">
         <div class="wrapper">
             <div class="security-content flow">
-                <h2 class="text-md text-bold">Votre argent est protégé par les meilleures technologies</h2>
+                <h2 class="text-lg text-bold">Votre argent est protégé par les meilleures technologies</h2>
                 <ul class="flow">
-                    <li class="text-xm">Chiffrement bancaire 256 bits</li>
-                    <li class="text-xm">2FA / OTP</li>
-                    <li class="text-xm">Système anti-fraude alimenté par IA</li>
-                    <li class="text-xm">Historique détaillé & traçabilité</li>
-                    <li class="text-xm">Sécurité conforme aux standards internationaux (PCI-DSS)</li>
+                    <li class="security-feature">
+                        <i class="ri-shining-line text"></i>
+                        <span class="text-xm">Chiffrement bancaire 256 bits</span>
+                    </li>
+                    <li class="security-feature">
+                        <i class="ri-shining-line text"></i>
+                        <span class="text-xm">2FA / OTP</span>
+                    </li>
+                    <li class="security-feature">
+                        <i class="ri-shining-line text"></i>
+                        <span class="text-xm">Système anti-fraude alimenté par IA</span>
+                    </li>
+                    <li class="security-feature">
+                        <i class="ri-shining-line text"></i>
+                        <span class="text-xm">Historique détaillé & traçabilité</span>
+                    </li>
+                    <li class="security-feature">
+                        <i class="ri-shining-line text"></i>
+                        <span class="text-xm">Sécurité conforme aux standards internationaux (PCI-DSS)</span>
+                    </li>
                 </ul>
             </div>
-            <div class="security-img-wrapper">
-                <img src="assets/img/security.png" width="1600" height="900" alt="Image">
+            <div class="img-wrapper">
+                <img src="assets/img/security.avif" width="1600" height="900" loading="lazy" alt="Image">
             </div>
         </div>
     </section>
 
-    <section class="pricing-section">
+    <section class="pricing-section" id="pricing-section">
         <div class="wrapper">
-            <div class="pricing-img-wrapper">
-                <img src="assets/img/pricing.png" width="1600" height="900" alt="Image">
+            <div class="img-wrapper">
+                <img src="assets/img/pricing.avif" width="1600" height="900" loading="lazy" alt="Image">
             </div>
 
             <div class="pricing-content">
@@ -215,25 +251,28 @@
     </section>
 
     <section class="partners-section">
-        <div class="wrapper">
+        <div class="wrapper flow-md">
+            <h2 class="text-center text-lg text-bold">
+                Nous collaborons avec plusieurs entreprises
+            </h2>
             <ul class="partner-list">
                 <li class="partner">
-                    <img src="assets/img/logo.svg" width="300" height="300" alt="Orange Money">
+                    <img src="assets/img/logo.svg" width="300" height="300" loading="lazy" alt="Orange Money">
                 </li>
                 <li class="partner">
-                    <img src="assets/img/logo2.svg" width="300" height="300" alt="Moov Money">
+                    <img src="assets/img/logo2.svg" width="300" height="300" loading="lazy" alt="Moov Money">
                 </li>
                 <li class="partner">
-                    <img src="assets/img/logo3.svg" width="300" height="300" alt="MTN Mobile Money">
+                    <img src="assets/img/logo3.svg" width="300" height="300" loading="lazy" alt="MTN Mobile Money">
                 </li>
                 <li class="partner">
-                    <img src="assets/img/logo4.svg" width="300" height="300" alt="Ecobank">
+                    <img src="assets/img/logo4.svg" width="300" height="300" loading="lazy" alt="Ecobank">
                 </li>
                 <li class="partner">
-                    <img src="assets/img/logo5.svg" width="300" height="300" alt="UBA">
+                    <img src="assets/img/logo5.svg" width="300" height="300" loading="lazy" alt="UBA">
                 </li>
                 <li class="partner">
-                    <img src="assets/img/logo6.svg" width="300" height="300" alt="Airtel">
+                    <img src="assets/img/logo6.svg" width="300" height="300" loading="lazy" alt="Airtel">
                 </li>
             </ul>
         </div>
@@ -241,13 +280,13 @@
 
     <section class="cta-section">
         <div class="wrapper">
-            <h2 class="text-md text-bold text-center">Payez, recevez, avancez</h2>
+            <h2 class="text-lg text-bold text-center">Payez, recevez, avancez</h2>
             <p class="text-center">
                 Rejoignez les millions d’utilisateurs qui choisissent la simplicité et la sécurité pour leurs paiements
             </p>
             <div>
                 <a href="#" class="btn btn-primary">Créer un compte maintenant</a>
-                <a href="#" class="btn btn-secondary">Télécharger l’applicationt</a>
+                <a href="#" class="btn btn-secondary">Télécharger l’application</a>
             </div>
         </div>
     </section>
@@ -255,62 +294,62 @@
     <footer>
         <div class="wrapper">
             <div class="about flow-xs">
-                <p class="text-xm">
+                <p class="text-sm">
                     PayLink Africa est une plateforme de paiement moderne permettant d’envoyer, recevoir et gérer de l’argent en Afrique
                 </p>
-                <p class="social-links text">
-                    <a href="#" aria-label="Facebook contact" class="link ri-facebook-circle-fill"></a>
-                    <a href="#" aria-label="LinkedIn contact" class="link ri-linkedin-box-fill"></a>
-                    <a href="#" aria-label="Twitter contact" class="link ri-twitter-x-fill"></a>
-                    <a href="#" aria-label="YouTube contact" class="link ri-youtube-fill"></a>
+                <p class="social-links text-md">
+                    <a href="#" aria-label="Facebook contact" class="link-alt ri-facebook-circle-fill"></a>
+                    <a href="#" aria-label="LinkedIn contact" class="link-alt ri-linkedin-box-fill"></a>
+                    <a href="#" aria-label="Twitter contact" class="link-alt ri-twitter-x-fill"></a>
+                    <a href="#" aria-label="YouTube contact" class="link-alt ri-youtube-fill"></a>
                 </p>
             </div>
 
             <div class="flow-xs">
-                <h3 class="text-sm">Liens rapides</h3>
+                <h3 class="text-xd text-bold">Liens rapides</h3>
                 <div class="footer-link-list">
-                    <a href="#" class="link">Accueil</a>
-                    <a href="#" class="link">Fonctionnalités</a>
-                    <a href="#" class="link">Tarifs</a>
-                    <a href="#" class="link">Sécurité</a>
-                    <a href="#" class="link">API Développeurs</a>
-                    <a href="#" class="link">Entreprises</a>
+                    <a href="#" class="link-alt text-light text-sm">Accueil</a>
+                    <a href="#" class="link-alt text-light text-sm">Fonctionnalités</a>
+                    <a href="#" class="link-alt text-light text-sm">Tarifs</a>
+                    <a href="#" class="link-alt text-light text-sm">Sécurité</a>
+                    <a href="#" class="link-alt text-light text-sm">API Développeurs</a>
+                    <a href="#" class="link-alt text-light text-sm">Entreprises</a>
                 </div>
             </div>
 
             <div class="flow-xs">
-                <h3 class="text-sm">Support</h3>
+                <h3 class="text-xd text-bold">Support</h3>
                 <div class="footer-link-list">
-                    <a href="#" class="link">Centre d’aide</a>
-                    <a href="#" class="link">Assistance 24/7</a>
-                    <a href="#" class="link">Guide utilisateur</a>
-                    <a href="#" class="link">Documentation API</a>
-                    <a href="#" class="link">Signalement d’un problème</a>
+                    <a href="#" class="link-alt text-light text-sm">Centre d’aide</a>
+                    <a href="#" class="link-alt text-light text-sm">Assistance 24/7</a>
+                    <a href="#" class="link-alt text-light text-sm">Guide utilisateur</a>
+                    <a href="#" class="link-alt text-light text-sm">Documentation API</a>
+                    <a href="#" class="link-alt text-light text-sm">Signalement d’un problème</a>
                 </div>
             </div>
 
             <div class="flow-xs">
-                <h3 class="text-sm">Informations légales</h3>
+                <h3 class="text-xd text-bold">Informations légales</h3>
                 <div class="footer-link-list">
-                    <a href="#" class="link">Conditions d’utilisation</a>
-                    <a href="#" class="link">Politique de confidentialité</a>
-                    <a href="#" class="link">Conformité PCI-DSS</a>
-                    <a href="#" class="link">Gestion des données</a>
-                    <a href="#" class="link">Politique de remboursement</a>
+                    <a href="#" class="link-alt text-light text-sm">Conditions d’utilisation</a>
+                    <a href="#" class="link-alt text-light text-sm">Politique de confidentialité</a>
+                    <a href="#" class="link-alt text-light text-sm">Conformité PCI-DSS</a>
+                    <a href="#" class="link-alt text-light text-sm">Gestion des données</a>
+                    <a href="#" class="link-alt text-light text-sm">Politique de remboursement</a>
                 </div>
             </div>
 
             <div class="contact flow-xs">
-                <h3 class="text-sm">Contact</h3>
-                <p class="text-xm">
+                <h3 class="text-xd text-bold">Contact</h3>
+                <p class="text-sm">
                     <span>Email:</span>
-                    <a href="#" class="link">contact@agriconnect.af</a>
+                    <a href="#" class="link-alt text-light text-sm">contact@agriconnect.af</a>
                 </p>
-                <p class="text-xm">
+                <p class="text-sm">
                     <span>Téléphone:</span>
-                    <a href="#" class="link">+223 69 00 50 00</a>
+                    <a href="#" class="link-alt text-light text-sm">+223 69 00 50 00</a>
                 </p>
-                <p class="text-xm">
+                <p class="text-sm">
                     <span>Localisation:</span>
                     <span class="text-lead">Bamako, Mali</span>
                 </p>
