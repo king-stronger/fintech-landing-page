@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 :root {
     /****************** Font sizes ************/
     --fs-000: clamp(0.5277rem, 0.7015rem + -0.2242vw, 0.651rem);
@@ -35,33 +37,34 @@
     --gap-10: clamp(13.5rem, 11.3523rem + 9.5455vw, 18.75rem);
 
     /****************** Colors ************/
-    --bg-dark: hsl(30 15% 10%);
-    --bg: hsl(30 15% 15%);
-    --bg-light: hsl(30 15% 20%);
+    --bg-dark: hsl(210 15% 10%);
+    --bg: hsl(210 15% 15%);
+    --bg-light: hsl(210 15% 20%);
 
-    --text: hsl(30 15% 95%);
-    --text-muted : hsl(30 15% 70%);
+    --text: hsl(210 15% 97%);
+    --text-muted : hsl(210 15% 70%);
 
     --clr-black: hsl(0 5% 5%);
-    --clr-white: hsl(0 5% 95%);
-    --clr-accent: hsl(210 71% 45%);
-    --clr-primary: hsl(30 71% 45%);
+    --clr-white: hsl(0 5% 99%);
+    --clr-accent: hsl(30 71% 45%);
+    --clr-primary: hsl(210 71% 45%);
 
-    --clr-border: hsl(30 15% 20%);
-    --clr-container: hsl(30 17% 88%);
+    --clr-border: hsl(210 15% 20%);
+    --clr-container: hsl(210 17% 88%);
 
     /****************** Shadows ************/
-    --shadow-light:
-    0 2px 4px hsl(0 0% 0% / 0.10),
-    0 0 6px hsl(0 0% 0% / 0.06);
+    --shadow-light-dark:
+        0 2px 4px hsl(0 0% 100% / 0.18),
+        0 0 6px hsl(0 0% 100% / 0.14);
 
-    --shadow-medium:
-    0 4px 8px hsl(0 0% 0% / 0.12),
-    0 0 12px hsl(0 0% 0% / 0.08);
+    --shadow-medium-dark:
+        0 4px 8px hsl(0 0% 100% / 0.20),
+        0 0 12px hsl(0 0% 100% / 0.16);
 
-    --shadow-high:
-    0 8px 16px hsl(0 0% 0% / 0.16),
-    0 0 24px hsl(0 0% 0% / 0.10);
+    --shadow-high-dark:
+        0 8px 16px hsl(0 0% 100% / 0.24),
+        0 0 24px hsl(0 0% 100% / 0.18);
+
 }
 
 @layer reset, base, layout, utilities;
@@ -77,7 +80,8 @@
     html {
         font-size: 16px;
         scroll-behavior: smooth;
-        font-family: inter, sans-serif;
+        font-optical-sizing: auto;
+        font-family: "Inter", inter, sans-serif;
     }
     
     body {
@@ -87,6 +91,7 @@
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.2;
         text-wrap: balance;
+        font-family: "Space Grotesk";
     }
     
     p, span {
@@ -135,6 +140,7 @@
     /****************************************** HEADER **************************/
     header {
         background-color: var(--bg);
+        box-shadow: var(--shadow-light);
     }
 
     .nav-link {
@@ -156,11 +162,18 @@
     /****************************************** HERO SECTION **************************/
 
     /****************************************** WHY SECTION **************************/
+    .why i {
+        color: var(--clr-accent);
+    }
     /****************************************** WHY SECTION **************************/
 
     /****************************************** FEATURES SECTION **************************/
     .feature {
         background-color: var(--bg);
+
+        i {
+            color: var(--clr-accent);
+        }
     }
     /****************************************** FEATURES SECTION **************************/
 
@@ -171,6 +184,9 @@
     /****************************************** TARGETS SECTION **************************/
 
     /****************************************** SECURITY SECTION **************************/
+    .security-feature {
+        color: var(--clr-accent);
+    }
     /****************************************** SECURITY SECTION **************************/
 
     /****************************************** PRICING SECTION **************************/
@@ -178,7 +194,8 @@
 
     /****************************************** PARTNERS SECTION **************************/
     .partners-section {
-        background-color: var(--bg-light);
+        color: var(--clr-black);
+        background-color: var(--clr-white);
     }
     /****************************************** PARTNERS SECTION **************************/
 
@@ -197,6 +214,12 @@
 
 @layer layout {
     /****************************************** HEADER **************************/
+    header {
+        z-index: 1;
+        position: sticky;
+        inset: 0 auto auto auto;
+    }
+
     header .wrapper {
         display: flex;
         align-items: center;
@@ -248,6 +271,16 @@
     .wrapper {
         padding-block: var(--gap-5);
     }
+
+    .wrapper:has(> .img-wrapper){
+        .img-wrapper {
+            order: 1;
+        }
+
+        > :not(.img-wrapper){
+            order: 2;
+        }
+    }
     /****************************************** SECTIONS **************************/
 
     /****************************************** HERO SECTION **************************/
@@ -280,6 +313,12 @@
         align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
     }
+
+    .why {
+        display: flex;
+        gap: var(--gap-1);
+        align-items: center;
+    }
     /****************************************** WHY SECTION **************************/
 
     /****************************************** FEATURES SECTION **************************/
@@ -291,7 +330,7 @@
 
     .feature {
         display: flex;
-        gap: var(--gap-0);
+        gap: var(--gap-1);
         flex-direction: column;
         padding: var(--padding-3);
     }
@@ -319,6 +358,12 @@
         align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
     }
+
+    .security-feature {
+        display: flex;
+        gap: var(--gap-0);
+        align-items: center;
+    }
     /****************************************** SECURITY SECTION **************************/
 
     /****************************************** PRICING SECTION **************************/
@@ -332,10 +377,9 @@
 
     /****************************************** PARTNERS SECTION **************************/
     .partner-list {
-        display: flex;
+        display: grid;
         gap: var(--gap-4);
-        align-items: center;
-        justify-content: space-between;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 75px), 1fr));
     }
     /****************************************** PARTNERS SECTION **************************/
 
@@ -466,12 +510,16 @@
         margin-inline: auto;
     }
 
+    .text-light {
+        font-weight: 300;
+    }
+
     .text-bold {
-        font-weight: 600;
+        font-weight: 500;
     }
 
     .text-bolder {
-        font-weight: 700;
+        font-weight: 600;
     }
     /*********************** TYPOGRAPHY**************************/
 
@@ -535,7 +583,7 @@
     }
 
     .link {
-        color: var(--clr-dark-light);
+        color: var(--clr-black);
     }
 
     .link-alt {
